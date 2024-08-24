@@ -3,13 +3,22 @@ const app = express();
 const connectDB = require("./DATAbase/dbConnection");
 const cors = require("cors");
 connectDB();
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: (origin, callback) => {
+      const allowedOrigins = ["http://localhost:3000", "http://localhost:3002"];
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 app.use(express.json());
 const Position = require("./model/positionModel");
 const Holding = require("./model/holdingsModel.js");
@@ -142,43 +151,43 @@ app.use("/user", userRouter);
 //   res.send("holding added");
 // });
 
-// app.get('/addPositions',async(req,res) => {
-//   const temppos = [
-//     {
-//       product: "CNC",
-//       name: "EVEREADY",
-//       qty: 2,
-//       avg: 316.27,
-//       price: 312.35,
-//       net: "+0.58%",
-//       day: "-1.24%",
-//       isLoss: true,
-//     },
-//     {
-//       product: "CNC",
-//       name: "JUBLFOOD",
-//       qty: 1,
-//       avg: 3124.75,
-//       price: 3082.65,
-//       net: "+10.04%",
-//       day: "-1.35%",
-//       isLoss: true,
-//     },
-//   ];
-//   temppos.forEach((pos) => {
-//     Position.create({
-//       product: pos.product,
-//       name: pos.name,
-//       qty: pos.qty,
-//       avg: pos.avg,
-//       price: pos.price,
-//       net: pos.net,
-//       day: pos.day,
-//       isLoss:pos.isLoss,
-//     });
-//   })
-//   res.send("position added")
-// })
+app.get('/addPositions',async(req,res) => {
+  const temppos = [
+    {
+      product: "CNC",
+      name: "EVEREADY",
+      qty: 2,
+      avg: 316.27,
+      price: 312.35,
+      net: "+0.58%",
+      day: "-1.24%",
+      isLoss: true,
+    },
+    {
+      product: "CNC",
+      name: "JUBLFOOD",
+      qty: 1,
+      avg: 3124.75,
+      price: 3082.65,
+      net: "+10.04%",
+      day: "-1.35%",
+      isLoss: true,
+    },
+  ];
+  temppos.forEach((pos) => {
+    Position.create({
+      product: pos.product,
+      name: pos.name,
+      qty: pos.qty,
+      avg: pos.avg,
+      price: pos.price,
+      net: pos.net,
+      day: pos.day,
+      isLoss:pos.isLoss,
+    });
+  })
+  res.send("position added")
+})
 
 app.get("/allHoldings", async (req, res) => {
   const response = await Holding.find({});

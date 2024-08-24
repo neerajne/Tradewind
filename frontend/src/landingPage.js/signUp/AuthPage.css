@@ -1,0 +1,78 @@
+.auth-container {
+    background: url('../AuthAssets/project9.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-container input {
+    background: transparent;
+    border: none;
+    color: white;
+    flex: 1;
+    padding-left: 10px;
+}
+
+.input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-container .icon {
+    color: white;
+    
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: green;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+
+.switch-link {
+    margin-top: 20px;
+}
+
+.switch-link span {
+    color: cyan;
+    cursor: pointer;
+    text-decoration: underline;
+}

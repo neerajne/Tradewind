@@ -14,3 +14,7 @@ code {
 .nav-link{
   margin-left: 40px;
 }
+.Toastify__toast-container {
+  z-index: 9999;
+  /* Make sure the toast appears above other elements */
+}

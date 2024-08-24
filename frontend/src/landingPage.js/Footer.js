@@ -19,44 +19,43 @@ export const Footer = () => {
         <div className="col-4 pt-5">
           <img src="/images/logo.svg" alt="logo" style={{ width: "50%" }} />
           <p className="fs-10 mt-1">&copy;2010-2024</p>
-          <p> Not Zerodha Broking Ltd.</p>
-          <p> All rights reserved</p>
+          <p>Not Zerodha Broking Ltd.</p>
+          <p>All rights reserved</p>
           <div className="text-start">
             <Link>
-              {" "}
               <i
-                class="fa-brands fa-twitter"
-                style={{ marginLeft: "6rem", color: "#454545 " }}
+                className="fa-brands fa-twitter"
+                style={{ marginLeft: "6rem", color: "#454545" }}
               ></i>
             </Link>
             <Link>
               <i
-                class="fa-brands fa-facebook"
-                style={{ marginLeft: "0.8rem", color: "#454545 " }}
+                className="fa-brands fa-facebook"
+                style={{ marginLeft: "0.8rem", color: "#454545" }}
               ></i>
             </Link>
             <Link>
               <i
-                class="fa-brands fa-instagram"
-                style={{ marginLeft: "0.8rem", color: "#454545 " }}
+                className="fa-brands fa-instagram"
+                style={{ marginLeft: "0.8rem", color: "#454545" }}
               ></i>
             </Link>
             <Link>
               <i
-                class="fa-brands fa-linkedin"
-                style={{ marginLeft: "0.8rem", color: "#454545 " }}
+                className="fa-brands fa-linkedin"
+                style={{ marginLeft: "0.8rem", color: "#454545" }}
               ></i>
             </Link>
             <Link>
               <i
-                class="fa-brands fa-telegram"
-                style={{ marginLeft: "0.8rem", color: "#454545 " }}
+                className="fa-brands fa-telegram"
+                style={{ marginLeft: "0.8rem", color: "#454545" }}
               ></i>
             </Link>
           </div>
         </div>
         <div className="col-4 pt-5 text-start">
-          <p className="fs-6 " style={{ opacity: 0.8, fontWeight: "600" }}>
+          <p className="fs-6" style={{ opacity: 0.8, fontWeight: "600" }}>
             Company
           </p>
           <Link to="/about" style={linkStyle} className="pt-2">
@@ -88,24 +87,24 @@ export const Footer = () => {
           <h4 className="fs-6" style={{ opacity: 0.8, fontWeight: "600" }}>
             Support
           </h4>
-          <Link style={linkStyle}>contact</Link>
-          <Link style={linkStyle}>Support-portal</Link>
-          <Link style={linkStyle}>Z-connect blog</Link>
-          <Link style={linkStyle}>List of charges</Link>
-          <Link style={linkStyle}>Downloads and resources</Link>
+          <Link style={linkStyle}>Contact</Link>
+          <Link style={linkStyle}>Support Portal</Link>
+          <Link style={linkStyle}>Z-Connect Blog</Link>
+          <Link style={linkStyle}>List of Charges</Link>
+          <Link style={linkStyle}>Downloads and Resources</Link>
         </div>
-        <div className="col pt-5 text-start ">
+        <div className="col pt-5 text-start">
           <h4 className="fs-6" style={{ opacity: 0.8 }}>
             Account
           </h4>
           <Link to="/about" style={linkStyle} className="pt-2">
-            Open an account
+            Open an Account
           </Link>
           <Link to="/about" style={linkStyle} className="pt-2">
-            Fund transfer
+            Fund Transfer
           </Link>
           <Link to="/about" style={linkStyle} className="pt-2">
-            60 day challenge
+            60-Day Challenge
           </Link>
         </div>
       </div>

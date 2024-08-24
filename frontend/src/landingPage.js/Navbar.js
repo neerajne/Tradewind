@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 export const Navbar = () => {
   return (
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary border-bottom"
+      className="navbar navbar-expand-lg bg-body-tertiary border-bottom"
       style={{ backgroundColor: "#FFF" }}
     >
-      <div class="container-fluid p-2">
-        <Link class="navbar-brand" to="/">
+      <div className="container-fluid p-2">
+        <Link className="navbar-brand" to="/">
           <img
             src="/images/logo.svg"
-            style={{ width: "30%", paddingLeft:"5rem"}}
+            style={{ width: "30%", paddingLeft: "5rem" }}
             alt="logo zerodha"
           />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -23,33 +24,37 @@ export const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex" role="search">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="signup">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <form className="d-flex" role="search">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="signup"
+                >
                   SignUp
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" to="about">
+              <li className="nav-item">
+                <Link className="nav-link active" to="about">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" to="product">
+              <li className="nav-item">
+                <Link className="nav-link active" to="product">
                   Product
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" to="pricing">
+              <li className="nav-item">
+                <Link className="nav-link active" to="pricing">
                   Pricing
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" to="support">
+              <li className="nav-item">
+                <Link className="nav-link active" to="support">
                   Support
                 </Link>
               </li>
